@@ -4,17 +4,17 @@ body{
   margin: 0;
   background: black;
   cursor: pointer;
-  color: white;
+  color: black;
 }
 
 .main-content{
   display: block;
-  padding: 50px;
+  padding: 13px;
   margin: 0 auto;
   width: 100%;
   background: black;
   position: relative;
-  border: solid;
+  font-family: 'Noto Serif', serif;
 }
 
 .header-bar{
@@ -25,10 +25,19 @@ body{
   position: relative;
   text-align: center;
   top: 0;
-  left: 0
+  left: 0;
   padding: 10px;
-  font-size: 30px;
-  color: white;
+  font-size: 40px;
+  color: rgb(174, 15, 255);
+  line-height: 80px;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+}
+
+.second-header{
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
 }
 
 .picture-container{
@@ -45,6 +54,66 @@ body{
   background-size: contain;
 }
 
+.html-toggle{
+  text-decoration: none;
+  font-style: italic;
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.html-toggle:hover,.bio-button:hover{
+  color: rgb(174, 15, 255);
+  text-decoration: none;
+}
+
+.bio-button{
+  font-size: 20px;
+  margin: 5px;
+  padding: 2px;
+  font-style: italic;
+  color: white;
+}
+
+.bio-container{
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: -400px;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.bio-container.rotated{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 400px;
+  background: black;
+  color: white;
+  z-index: 25;
+  overflow-y: scroll;
+  display: block;
+  transform: rotate(360deg);
+  transition: all 2s;
+}
+
+.bio-hidden{
+  display: none;
+}
+
+.bio-container p{
+  padding: 5px;
+  font-size: 15px;
+}
+
+.bio-container a{
+  color: rgb(174, 15, 255);
+}
+
 .picture-container-now{
   padding: 10px;
   margin: 0 auto;
@@ -57,12 +126,14 @@ body{
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-image: url(background.jpg);
 }
 
 .picture-header1{
-  color: white;
+  color: rgb(247, 240, 12);
+  padding: 10px;
+  margin: 0 auto;
 }
 
 .picture{
@@ -74,15 +145,127 @@ body{
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 10px;
 }
 
 .link{
   padding: 5px;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 .link:hover{
   text-decoration: none;
   color: grey;
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: black;
+  text-align: center;
+}
+
+.footer h1{
+  color: white;
+  font-style: italic;
+}
+
+.fa-instagram, .fa-facebook{
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.email-inquiry{
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.email-inquiry:hover, .fa-facebook:hover, .fa-instagram:hover{
+  text-decoration: none;
+  color: rgb(174, 15, 255);
+}
+
+.gallery-container{
+  width: 100%;
+  margin: 0 auto;
+  background: black;
+  text-align: center;
+  display: block;
+}
+
+.now-picture{
+  height: 200px;
+  width: 200px;
+  display: inline-flex;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+  background: black;
+}
+.gallery-click{
+  font-style: italic;
+  color: #ae0fff;
+  background: black;
+  border: black;
+  padding: 5px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+@media  (min-width: 1700px) and
+		(max-width: 3500px){
+  .header-bar{
+    font-size: 40px;
+  }
+
+  .fa-instagram, .fa-facebook{
+    font-size: 45px;
+  }
+  .email-inquiry{
+    font-size: 40px;
+  }
+  .footer h1{
+    font-size: 39px;
+    padding: 5px;
+  }
+  .picture-container-now{
+    height: 700px;
+  }
+}
+
+@media  (min-width: 0px) and
+		(max-width: 768px) {
+
+.header-bar{
+  font-size: 30px;
+}
+
+.bio-container{
+  width: 250px;
+  height: 250px;
+}
+
+.bio-container.rotated{
+  width: 250px;
+  height: 250px;
+}
+
+.fa-instagram, .fa-facebook{
+  font-size: 25px;
+}
+.email-inquiry{
+  font-size: 20px;
+}
+.footer h1{
+font-size: 29px;
+padding: 5px;
+}
+
 }

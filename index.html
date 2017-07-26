@@ -7,57 +7,54 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/f6bd501eb7.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
 <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body ng-app="app" ng-controller="myController">
-  <header class="header-bar">Kara Young</header>
+  <header ng-click="reset()" class="header-bar"><p><i>Kara Young: "Then"</i></p></header>
          <div class="main-content">
-              <div class="picture-container">
+           <div  ng-click="reset()" id="rotate-bio" class="bio-container" ng-class="myClass">
+                  <p>
+                     Kara Young Georgiopoulos lives in New York City with her husband,
+                     Peter Georgiopoulos, and two sons, Nicola' and Constantine.
+                     Kara Young was an international supermodel entrepreneur and philanthropist then.
+                     Kara is an international supermodel entrepreneur, philanthropist, mother and wife now.
+                  </p>
+                  <p>Appearing in Sports Illustrated Swimsuit Edition, Victoria Secret campaigns,
+                     Vogue, Elle, Glamour, Cosmopolitan and numerous other
+                     international magazines. Covergirl Kara Young
+                     lead numerous global marketing campaigns,
+                     for cosmetic giants such as Revlon, Maybelline and LoReal,
+                     along with appearences on Fox News Channel covering
+                     entertainment fashion shows, films and music.
+                  </p>
+                  <p>Currently Mrs. Kara Young Georgiopoulos is a Mother of Two, Wife,
+                     Model and Mentor to many. Participating in many charities in New York.
+                     An active executive board member for "Action
+                     Against Hunger"<a href="http://www.actionagainsthunger.org/" target="_blank"> actionagainsthunger.org </a>
+                     (click the link to learn more).
+                  </p>
+           </div>
+           <div class="second-header"><span><a class="html-toggle" href="thisIsNow.html">NOW!</a></span>
+           <span class="bio-button" ng-click="showBio()">BIO!</span></div>
+              <div  ng-click="reset()" class="picture-container">
                    <div ng-repeat="imageName in karasPictures">
-                      <h1 class="picture-header1">{{imageName.name}}</h1>
-                      <h2><span><a class="link" ng-href="{{imageName.link}}" target="_blank">Click Me</a></span></h2>
+                    <!--  <h1 class="picture-header1">{{imageName.name}}</h1> -->
                       <span><img class="picture" ng-src="{{imageName.img1}}"></span>
                       <span><img class="picture" ng-src="{{imageName.img2}}"></span>
                       <span><img class="picture" ng-src="{{imageName.img3}}"></span>
-                    </div> 
-              </div>
+                    </div>
+                  </div>
+              <footer class="footer">
+                <h1>Contact and Social Media</h1>
+                   <section class="contact-info">
+                     <a href="https://www.instagram.com/iamkarayoung/" target="_blank" class="fa fa-instagram"></a>
+                     <span><a  class="email-inquiry" href="mailTo:karayoung@aol.com?Subject=Kara%20Young%20Inquiries!">karayoung@aol.com</a></span>
+                     <a href="https://www.facebook.com/kara.georgiopoulos?ref=br_rs" target="_blank" class="fa fa-facebook"></a>
 
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
+                   </section>
+              </footer>
+            </div>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
